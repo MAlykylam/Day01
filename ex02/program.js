@@ -1,14 +1,15 @@
-firstDuplicateValue([1, 5, 3, 4, 5, 4]);
-
-function firstDuplicateValue(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      if (array[i] == array[j] && i != j) {
-        return array[i];
-      }
-      console.log(array[i]);
+function pocketMoney(coins) {
+  let P = coins.sort(function (a, b) {
+    return a - b;
+  });
+  let sCoin = 0;
+  for (let i = 0; i < P.length; i++) {
+    if (P[i] > sCoin + 1) {
+      return sCoin + 1;
     }
+    sCoin += P[i];
   }
-  return -1;
+  return sCoin + 1;
 }
-exports.firstDuplicateValue = firstDuplicateValue;
+
+exports.pocketMoney = pocketMoney;
