@@ -6,7 +6,7 @@ function tabTriCarre(array) {
     console.log(array[i], result[i]);
     console.log("----------------");
   }
-  return result;
+  return result.sort((a, b) => a - b);
 }
 
 tabTriCarre([1, 2, 3, 4]);
