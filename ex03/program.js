@@ -16,7 +16,7 @@ function runLengthEncoding(string) {
   return runLengthEncoding;
 }
 
-runLengthEncoding("WWWWWWWWWWWWBWWWdddddWWWWWWWWB"); // "12WB12W3B24WB"
+runLengthEncoding("AAAAAAAAAAAAABBCCCCDD");
 
 // Merci de ne pas effacer la ligne en dessous.
 exports.runLengthEncoding = runLengthEncoding;
